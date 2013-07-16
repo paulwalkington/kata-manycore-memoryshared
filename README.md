@@ -1,13 +1,23 @@
 Code Kata on Shared Memory
 =======================================
 
+Preamble
+--------
+
 Second of a series of Code Kata accompanying sessions on concurrency on many cores.
 
 The objective of this Code Kata is to broaden and deepen knowledge of
-concurrency techniques. There are many ways to fail, some to succeed and
+concurrency techniques. 
+
+There are many ways to fail, some to succeed and
 several good solutions in a few distinctively different styles.
+
+The Kata
+--------
  
-1. Read the  [`code`](src/main/java/name/robertburrelldonkin/kata/manycore/memoryshare/ASharedMemoryKata.java). 
+`java -classpath target/classes/ name.robertburrelldonkin.kata.manycore.memoryshare.ASharedMemoryKata`
+ 
+1. Read the  [code](src/main/java/name/robertburrelldonkin/kata/manycore/memoryshare/ASharedMemoryKata.java). 
  What do you expect to happen when the application is run...?
  
 2. Run the application. Offer an explanation for what you observe.
