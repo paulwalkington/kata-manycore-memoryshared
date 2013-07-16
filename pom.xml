@@ -22,7 +22,8 @@
   <version>1-SNAPSHOT</version>
   <packaging>jar</packaging>
 
-  <name>Kata for Shared Memory</name>
+  <name>A Code Kata about Shared Memory</name>
+  <url>https://github.com/RobertBurrellDonkin/kata-manycore-memoryshared</url>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>

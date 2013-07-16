@@ -19,8 +19,28 @@ package name.robertburrelldonkin.kata.manycore.memoryshare;
 import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.atomic.AtomicInteger;
 
-public class AContendedAggregateKata {
+/**
+ * <h3>A Code Kata about Shared Memory</h3>
+ * <ul>
+ * <li><code>Counter</code> is a toy summarizer, making additions to a
+ * <code>long</code> total.</li>
+ * <li><code>CounterClient</code> exercises the <code>Counter</code> API.</li>
+ * <li><code>Harness</code> prepares and runs <code>CounterClient</code>
+ * instances concurrently.</li>
+ * </ul>
+ * <p>
+ * The main method is simple and tucked away at the bottom. Take a look at the
+ * code and then run. Explain what you observe.
+ * </p>
+ * <p>
+ * The objective of this Code Kata is to broaden and deepen knowledge of
+ * concurrency techniques. There are many ways to fail, some to succeed and
+ * several quite different good solutions.
+ * </p>
+ */
+public class ASharedMemoryKata {
 
+    /** A toy summarizer, adding to a running <code>long</code> total */
     static class Counter {
 
         private long count = 0;
@@ -37,6 +57,7 @@ public class AContendedAggregateKata {
         }
     }
 
+    /** Exercises the <code>Counter</code> API */
     static class CounterClient {
         final int addThisValue;
         final Counter sharedCounter;
@@ -61,6 +82,10 @@ public class AContendedAggregateKata {
         }
     }
 
+    /**
+     * Prepares and runs <code>CounterClient</code> instances
+     * concurrently
+     */
     static class Harness {
 
         private final int addThisValue;
@@ -145,6 +170,7 @@ public class AContendedAggregateKata {
         }
     }
 
+    /** Simply runs the harness. Vary the parameters and observe the results. */
     public static void main(String[] args) throws Exception {
         new Harness(7, 1000).startThreadsNumbering(1000);
     }
